@@ -1,0 +1,158 @@
+/* Color-darkGrey : #313b3d */
+/* Color-lightBlue : #78adc8 */
+
+/* Header and Body */
+*{
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Varela', sans-serif;	
+}
+body{
+    min-height: 100vh;
+    font-family: 'Merriweather', serif;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    background-color: #313b3d;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    margin-top: 15px;
+}
+nav ul li{
+    list-style: none;
+    padding: 0 10px;
+}
+header a{
+    text-decoration: none;
+    color: #fff;
+}
+.logo{
+    font-size: 23px;
+    font-weight: bold;
+}
+.logo-s{
+    color: #78adc8;
+}
+.logo:hover{
+    color: #fff;
+}
+nav ul li a:hover{
+    color: #78adc8;
+}
+/* End of Head and Body */
+
+/* Footer Section */
+footer{
+    margin-top: auto;
+    width: 100%;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-around;
+    background-color: #313b3d;
+    color: #fff;
+}
+.satu{
+    margin: 10px auto;
+    padding: 20px 20px;
+    max-width: 20%;
+}
+.dua{
+    margin: 10px auto;
+    padding: 20px 20px;
+    max-width: 20%;
+}
+footer p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-content .dua .icons a{
+    margin-right: 17px;
+    color: #fff;
+}
+/* End of Footer Section */
+
+/* --Kunjungan-- */
+.container-kunjungan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px auto;
+}
+.container-kunjungan .first-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-kunjungan .first-content span{
+    display: inline-block;
+    text-align: center;
+    height: 5px;
+    width: 50px;
+    background: none repeat scroll 0 0 #78ADC9;
+}
+.container-kunjungan .second-content{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.container-kunjungan .second-content form{
+    display: flex;
+    flex-direction: column;
+    min-width: 47%;
+    margin: 0 10px;
+    padding-right: 30px;
+    align-items: center;
+}
+.container-kunjungan .second-content form input{
+    margin: 10px 0;
+}
+.container-kunjungan .second-content .alamat{
+    max-width: 20%;
+    padding-right: 10px;
+    margin-right: 20px;
+}
+.container-kunjungan .second-content .alamat a{
+    color: rgb(197, 197, 197);
+    margin-right: 15px;
+}
+.my-form-control{
+    height: 47px;
+    border-radius: 10px;
+    border: 0.5px solid rgb(201, 201, 201);
+    width: 100%;
+}
+.my-form-control.is-invalid{
+    border-color: red;
+}
+.my-form-control.is-invalid::placeholder{
+    color: red;
+}
+form small{
+    padding-right: 73%;
+    color: red;
+}
+.my-form-control#tanggal{
+    background-color: rgb(224, 224, 224);
+}
+.my-form-control.my-textarea{
+    height: 200px;
+}
+.my-form-control.submit-btn{
+    border: 1px solid #78adc8;
+    width: 25%;
+    color: #78ADC9;
+}
+.my-form-control.submit-btn:hover{
+    color: #fff;
+    background-color: #78ADC9;
+}
+/* --End of Kunjungan-- */
