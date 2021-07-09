@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Visitor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class VisitorsController extends Controller
 {
@@ -22,6 +23,25 @@ class VisitorsController extends Controller
         // Fetch all data
         $visitors = Visitor::all();
         return view('admin.pengunjung', compact('visitors'));
+    }
+
+    /**
+     * Show summary of all data
+     * 
+     */
+    public function summary(){
+        $today = DB::table('visitors')->whereDate('created_at', date('Y-m-d'))->sum('jumlah');
+        $month = DB::table('visitors')->whereMonth('created_at', date('m'))->sum('jumlah');
+        $total = count(Visitor::all());
+        $turis = DB::table('visitors')->where('asal', '<>', 'Indonesia')->sum('jumlah');
+        $data = collect([
+            'today'=>$today, 
+            'month'=>$month,
+            'turis'=>$turis,
+            'total'=>$total,
+        ]);
+        $data->toJson();
+        return response()->json($data, 200);
     }
 
     /**

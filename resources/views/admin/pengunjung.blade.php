@@ -16,7 +16,7 @@
                 <th scope="col">Aksi</th>
             </tr>
             </thead>
-            <tbody>
+            <tbody id='table'>
             @foreach ($visitors as $visitor)
             <tr>
                 <th scope="row">{{ $loop->iteration }}</th>
@@ -26,7 +26,18 @@
                 <td>{{ $visitor->alamat }}</td>
                 <td>{{ $visitor->jumlah }}</td>
                 <td>{{ $visitor->keterangan }}</td>
-                <td class="aksi"><form action="{{ url('admin/daftar') }}/{{ $visitor->id }}" method="post">@method('put')@csrf<button type="submit" class="btn btn-primary">Edit</button></form> <form action="{{ url('admin/daftar') }}/{{ $visitor->id }}" method="post">@method('delete')@csrf<button type="submit" class="btn btn-danger">Delete</button></form></td>
+                <td class="aksi">
+                    <form action="{{ url('admin/daftar') }}/{{ $visitor->id }}" method="post">
+                        @method('put')
+                        @csrf
+                        <button type="submit" class="btn btn-primary">Edit</button>
+                    </form> 
+                    <form action="{{ url('admin/daftar') }}/{{ $visitor->id }}" method="post">
+                        @method('delete')
+                        @csrf
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
             </tr>
             @endforeach
             </tbody>

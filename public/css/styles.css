@@ -13,6 +13,7 @@ body{
     font-family: 'Merriweather', serif;
     display: flex;
     flex-direction: column;
+    margin: 0px;
 }
 header{
     background-color: #313b3d;

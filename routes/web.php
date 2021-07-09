@@ -23,5 +23,6 @@ Route::get('/kunjungan', function () {
 Route::get('/admin', [AdminPagesController::class, 'index']);
 Route::get('/admin/logout', [AdminPagesController::class, 'logout']);
 Route::get('/admin/daftar', [VisitorsController::class, 'index']);
+Route::get('/summary', [VisitorsController::class, 'summary']);
 Route::post('/kunjungan', [VisitorsController::class, 'store']);
 Route::delete('admin/daftar/{visitor}', [VisitorsController::class, 'destroy']);
